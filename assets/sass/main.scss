@@ -1,0 +1,22 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './theme.scss';
+@import './profile.scss';
+@import './buttons.scss';
+@import './filters.scss';
+@import './projects.scss';
+@import './skills.scss';
+@import './footer.scss';
+@import './scrollbar.scss';
+
+/* ======== CLASSES REUTILIZAVÉIS ======== */
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}

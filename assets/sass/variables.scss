@@ -1,0 +1,232 @@
+/* Purple: hsl(299, 52%, 32%)
+PurpleExemplo: hsl(250,66%, 75%); */
+
+$hue: 299;
+$sat: 52%;
+$lig: 32%;
+
+/* COLORS */
+$primary-color: hsl($hue, $sat, $lig);
+$primary-color-alt: hsl($hue, $sat, 57%);
+$title-color: hsl($hue, 12%, 15%);
+$text-color: hsl($hue, 12%, 45%);
+$text-color-light: hsl($hue, 8%, 75%);
+$text-color-lighten: hsl($hue, 8%, 92%);
+$body-color: hsl($hue, 100%, 99%);
+$container-color: #fff;
+$secondary-color: #865886;
+
+/* FONTS */
+$font-title: 'Iceland', cursive;
+$font-body: 'Inter Tight', sans-serif;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 0.75rem;
+
+/* =========== Variaveis do Tema Dark =========== */
+$title-color-dark: hsl($hue, 12%, 95%);
+$text-color-dark: hsl($hue, 12%, 75%);
+$body-color-dark: hsl($hue, 4%, 8%);
+$container-color-dark: hsl($hue, 24%, 12%);
+
+body {
+  &.dark-theme {
+    background-color: $body-color-dark;
+    color: text-color-dark;
+
+    .button__gray {
+      color: $title-color-dark;
+      background-color: $container-color-dark;
+
+      &:hover {
+        background-color: hsl($hue, 24%, 16%);
+      }
+    }
+
+    .filters__content {
+      background-color: $container-color-dark;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: hsl($hue, 8%, 16%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: hsl($hue, 32%, 38%);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: hsl($hue, 52%, 68%);
+    }
+
+    .filters__button:hover,
+    .filter-tab-active {
+      background-color: $body-color-dark;
+    }
+
+    .filters__button,
+    .profile__social-link,
+    h3,
+    h2 {
+      color: $title-color-dark;
+    }
+
+    .profile__social-link:hover {
+      color: $primary-color;
+    }
+
+    .profile__professional,
+    .skills__level {
+      color: $text-color-dark;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    $h2-font-size: 1.5rem;
+    $h3-font-size: 1.25rem;
+    $normal-font-size: 1rem;
+    $small-font-size: 0.875rem;
+    $smaller-font-size: 0.814rem;
+  }
+}
+
+/* ======== BREACKPOINTS ======== */
+/* Dispositivos pequenos */
+@media screen and (max-width: 410px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .profile__info {
+    column-gap: 1.5rem;
+  }
+
+  .profile__buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .filters__content {
+    flex-wrap: wrap;
+  }
+
+  .skills__box {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+}
+
+/* Dispositivos médios */
+@media screen and (min-width: 576px) {
+  .filters {
+    .filters__sections {
+      .projects__content {
+        /*  display: grid; */
+        grid-template-columns: 332px;
+        justify-content: center;
+      }
+    }
+
+    .filters__content {
+      width: 332px;
+      margin: 3rem auto;
+    }
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .filters {
+    .filters__sections {
+      .projects__content {
+        grid-template-columns: repeat(2, 332px);
+        justify-content: center;
+      }
+    }
+
+    .filters__content {
+      width: 664px;
+      margin: 3rem auto;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header.container,
+  .container,
+  section.container,
+  footer.container {
+    margin-left: auto;
+    margin-right: auto;
+
+    .change-theme {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
+  }
+
+  .profile {
+    padding-top: 4rem;
+
+    .profile__border {
+      width: 155px;
+      height: 155px;
+      margin-bottom: 1rem;
+
+      .profile__perfil {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    .profile__professional {
+      margin-bottom: 1.5rem;
+    }
+
+    .profile__info {
+      column-gap: 3rem;
+
+      .profile__info-description {
+        font-size: $small-font-size;
+      }
+    }
+
+    .profile__container {
+      .profile__buttons {
+        column-gap: 2rem;
+      }
+    }
+  }
+
+  .main {
+    .filters {
+      .projects__content.grid {
+        gap: 2rem 3rem;
+      }
+    }
+
+    .filters__sections {
+      .skills__content {
+        .skills__area {
+          .skills__title {
+            font-size: $normal-font-size;
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer__copy {
+      margin: 4.5rem 0 2.5rem;
+    }
+  }
+}
